@@ -1,0 +1,6 @@
+{
+  "created_at": "2025-07-23T17:20:08.624245",
+  "vector_count": 51,
+  "dimension": 3072,
+  "index_type": "IndexFlatL2"
+}

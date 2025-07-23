@@ -1,0 +1,22 @@
+[project]
+name = "pocketflow-rag"
+version = "0.1.0"
+description = "Production-ready RAG system with document parsing support"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=1.26.0",
+    "python-dotenv>=1.1.1",
+    "pocketflow>=0.0.1",
+    "numpy>=1.20.0",
+    "faiss-cpu>=1.7.0",
+    "pypdf2>=3.0.0",
+    "python-docx>=1.1.0",
+    "beautifulsoup4>=4.12.0",
+    "markdown>=3.5.0",
+    "nltk>=3.8.0",
+    "spacy>=3.7.0",
+    "tqdm>=4.66.0",
+    "watchdog>=3.0.0",
+    "pathlib>=1.0.0",
+]

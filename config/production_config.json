@@ -1,0 +1,53 @@
+{
+  "offline": {
+    "chunk_size": 1500,
+    "chunk_overlap": 300,
+    "index_path": "production_index.faiss",
+    "save_index": true,
+    "batch_size": 100
+  },
+  "online": {
+    "k": 10,
+    "min_similarity_threshold": 0.15
+  },
+  "document_parser": {
+    "max_file_size_mb": 50,
+    "skip_empty_files": true,
+    "extract_metadata": true,
+    "supported_formats": [".pdf", ".docx", ".txt", ".md", ".html"],
+    "pdf_extract_images": false,
+    "docx_extract_tables": true
+  },
+  "batch": {
+    "max_file_size_mb": 50,
+    "skip_corrupted_files": true,
+    "parallel_processing": false,
+    "checkpoint_frequency": 100,
+    "progress_reporting": true
+  },
+  "performance": {
+    "embedding_batch_size": 32,
+    "faiss_index_type": "IndexFlatIP",
+    "memory_limit_gb": 8,
+    "use_gpu": false
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "rag_production.log",
+    "max_log_size_mb": 100,
+    "backup_count": 5
+  },
+  "security": {
+    "sanitize_filenames": true,
+    "max_directory_depth": 10,
+    "allowed_mime_types": [
+      "application/pdf",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "text/plain",
+      "text/markdown",
+      "text/html"
+    ]
+  },
+  "default_documents": [],
+  "default_query": "What are the main topics discussed in these documents?"
+}
